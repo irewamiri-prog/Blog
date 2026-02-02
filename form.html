@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ires form page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: white;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: auto;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-box {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px purple;
+        }
+
+        .row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 6px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="password"],
+        input[type="number"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid white;
+            border-radius: 8px;
+            box-sizing: border-box;
+            outline: none;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            border-color: blue;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 90px;
+        }
+
+        .section {
+            margin-top: 16px;
+        }
+
+        .options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .option {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: #f7f9fc;
+            padding: 8px 10px;
+            border-radius: 10px;
+            border: 1px solid #e3e8ef;
+        }
+
+        .btn-row {
+            display: flex;
+            gap: 10px;
+            margin-top: 18px;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            border: none;
+            padding: 12px 14px;
+            border-radius: 10px;
+            cursor:pointer;
+            font-weight: bold;
+            width: 100%;
+        }
+
+        input[type="submit"] {
+            background: blue;
+            color: white;
+        }
+
+        input[type="submit"]:hover {
+            background:blue;
+        }
+
+        input[type="reset"] {
+            background:blue;
+        }
+
+        .links {
+            margin-top: 18px;
+            text-align: center;
+        }
+
+        .links a {
+            text-decoration: none;
+            color: blueviolet;
+            margin: 0 6px;
+        }
+
+        .links a:hover {
+            text-decoration: underline;
+        }
+
+    
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Welcome to Ire Form Page</h1>
+
+        <div class="form-box">
+            <form action="submit.php" method="get">
+
+                <div class="grid-template-columns">
+                    <div>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Your name">
+                    </div>
+
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="you@example.com">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div>
+                        <label for="phone">Phone:</label>
+                        <input type="tel" id="phone" name="phone" placeholder="07...">
+                    </div>
+
+                    <div>
+                        <label for="age">Age:</label>
+                        <input type="number" id="age" name="age" min="1" max="120" placeholder="e.g. 17">
+                    </div>
+                </div>
+
+                <div class="section">
+                    <label for="country">Country:</label>
+                    <select id="country" name="country">
+                        <option value="">Select one</option>
+                        <option value="uk">United Kingdom</option>
+                        <option value="usa">USA</option>
+                        <option value="canada">naija</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="section">
+                    <label>Gender : </label>
+                    <div class="options">
+                        <label class="option">  
+                            <input type="radio" name="gender" value="male">
+                            Male
+                        </label>
+
+                        <label class="option">
+                            <input type="radio" name="gender" value="female">
+                            Female
+                        </label>
+
+                        <label class="option">
+                            <input type="radio" name="gender" value="prefer_not">
+                           gay? , why are you gay?
+                        </label>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <label>Interests:</label>
+                    <div class="options">
+                        <label class="option">
+                            <input type="checkbox" name="interests" value="sports">
+                            Sports
+                        </label>
+
+                        <label class="option">
+                            <input type="checkbox" name="interests" value="music">
+                            Music
+                        </label>
+
+                        <label class="option">
+                            <input type="checkbox" name="interests" value="coding">
+                            Coding
+                        </label>
+
+                        <label class="option">
+                            <input type="checkbox" name="interests" value="gaming">
+                            Gaming
+                        </label>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Create a password">
+                </div>
+
+                <div class="section">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" placeholder="Write something..."></textarea>
+                </div>
+
+                <div class="btn-row">
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Clear">
+                </div>
+            </form>
+
+            <div class="links">
+                <a href="about.html">Go to About.html</a>
+                <a href="pops.html">Go to Pops.html</a>
+                <a href="index.html">Go to Index.html</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
