@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Education Blog</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: white;
+    }
+
+    header {
+      background-color: black   ;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color:grey;
+      text-decoration-color: brown;
+    }
+
+    nav a {
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    nav a:hover,
+    nav a.active {
+      background-color: #575757;
+    }
+
+    .intro {
+      padding: 20px;
+      text-align: center;
+      background-color: #e9ecef;
+      color: #333;
+    }
+
+    .blog-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .blog-post {
+      background-color: white;
+      border: 1px solid #ccc;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .blog-post img {
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
+
+    .blog-post h3 {
+      margin-top: 10px;
+    }
+
+    .blog-post p {
+      flex-grow: 1;
+    }
+
+    .blog-post button {
+      background-color: #004080;
+      color: white;
+      border: none;
+      padding: 10px;
+      margin-top: 10px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    .blog-post button:hover {
+      background-color: #00264d;
+    }
+
+    @media (min-width: 600px) {
+      .blog-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 900px) {
+      .blog-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Education Blog</h1>
+    <p>Inspiring minds through learning</p>
+  </header>
+
+  <nav>
+    <a href="index.html" class="active">index.html</a>
+    <a href="about.html">About.html</a>
+    <a href="form.html">form.html</a>
+  </nav>
+
+  <section class="intro">
+    <p>Explore our latest articles on education, learning strategies, and teaching innovations. Education empowers people, and we’re here to share ideas that transform classrooms and minds.</p>
+  </section>
+
+  <section class="blog-grid">
+    <!-- Blog Post 1 -->
+    <div class="blog-post">
+      <img src="images.jpg" alt="Education Image">
+      <h3>Innovative Teaching Techniques</h3>
+      <p>Discover creative methods to engage students in modern classrooms.</p>
+      <button>View</button>
+    </div>
+
+    <!-- Blog Post 2 -->
+    <div class="blog-post">
+      <img src="images2.jpg" alt="Education Image">
+      <h3>Online Learning Tips</h3>
+      <p>Learn how to succeed in virtual classrooms with effective strategies.</p>
+      <button>View</button>
+    </div>
+
+    <!-- Blog Post 3 -->
+    <div class="blog-post">
+      <img src="images3.jpeg" alt="Education Image">
+      <h3>Importance of Early Education</h3>
+      <p>Understand the foundational impact of early childhood learning.</p>
+      <button>View</button>
+    </div>
+
+    <!-- Blog Post 4 -->
+    <div class="blog-post">
+      <img src="images4.jpg" alt="Education Image">
+      <h3>Learning Through Play</h3>
+      <p>Explore how play-based learning fosters creativity and growth.</p>
+      <button>View</button>
+    </div>
+
+    
+  </section>
+</body>
+</html>
